@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
 const App = () => {
-  const [num, setnum] = useState(2);
   return (
-    <div className="p-12">
-      <h1 className="text-xl bg-blue-200 px-6 py-6 text-center font-bold">Number is {num}</h1>
-      <button onClick={() => setnum(num + 1)} className="bg-zinc-800 text-white px-8 py-2 my-4">
-        Increment
-      </button>
-      <button onClick={() => setnum(num - 1)} className="bg-zinc-800 text-white px-8 py-2 my-4 mx-2">
-        Decrement
-      </button>
-      <button onClick={() => setnum(2)} className="bg-zinc-800 text-white px-8 py-2 my-4 mx-2 ">
-        Reset
-      </button>
-    </div>
+    <>
+      <nav className="bg-emerald-700 flex py-5 px-10 items-center justify-between">
+        <h1 className="text-2xl">Osama</h1>
+        <div className="flex gap-10 items-center">
+          <h4 className="text-xl">Home</h4>
+          <h4 className="text-xl">About Us</h4>
+          <h4 className="text-xl">Contact</h4>
+          <h4 className="text-xl">Profile</h4>
+        </div>
+      </nav>
+    </>
   );
 };
 
