@@ -114,24 +114,47 @@
 
 // export default App;
 
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Product from "./pages/Product";
+// import React from "react";
+// import { Route, Routes } from "react-router-dom";
+// import About from "./pages/About";
+// import Contact from "./pages/Contact";
+// import Home from "./pages/Home";
+// import Product from "./pages/Product";
+// import Header from "./components/Header";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Header />
+//       <Routes>
+//         <Route path="/about" element={<About />} />
+//         <Route path="/" element={<Home />} />
+//         <Route path="/contact" element={<Contact />} />
+//         <Route path="/product" element={<Product />} />
+//       </Routes>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// ---------------------Context API Topic------------------------------
+
+import React, { useContext } from "react";
+import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { DataContext } from "./context/Usercontext";
 
 const App = () => {
+  const data = useContext(DataContext);
+  console.log(data);
   return (
     <div>
+      <h1>Hello Kyaa haal hayn {data} </h1>
+      <Navbar />
       <Header />
-      <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product />} />
-      </Routes>
+      <Footer />
     </div>
   );
 };
